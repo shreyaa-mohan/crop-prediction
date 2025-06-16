@@ -32,9 +32,6 @@ SMS notifications are sent using [Fast2SMS](https://www.fast2sms.com/) API. Afte
 Dear Farmer, the predicted yield for Wheat is 22.56 quintals/ha,
 and the predicted price is 1830.75 INR.
 
-yaml
-Copy
-Edit
 
 ---
 
@@ -59,23 +56,23 @@ cd crop-prediction
 
 ### 2. (Optional) Create a virtual environment
 
-python -m venv venv
-source venv/bin/activate      # macOS/Linux
-venv\Scripts\activate          # Windows
+- python -m venv venv
+- source venv/bin/activate      # macOS/Linux
+- venv\Scripts\activate          # Windows
 
 ### 3. Install dependencies
-pip install -r requirements.txt
+- pip install -r requirements.txt
 
 ### 4. Add your Fast2SMS API key
-In app.py, replace the authorization key:
-headers = {
+- In app.py, replace the authorization key:
+-headers = {
     'authorization': 'YOUR_FAST2SMS_API_KEY'
 }
 
 ### 5. Run the app
-python app.py
-Open your browser at:
-http://127.0.0.1:5000
+- python app.py
+- Open your browser at:
+- http://127.0.0.1:5000
 
 ## 📌 Use Cases
 📲 Farmer assistance in rural areas without internet
@@ -83,7 +80,7 @@ http://127.0.0.1:5000
 🧪 ML model experimentation in agriculture
 
 ## 🔮 Future Improvements
-Current Limitation	Possible Enhancement
+-Current Limitation	Possible Enhancement
 Basic regression models	Use advanced models (e.g., XGBoost)
 SMS in English only	Add regional language support
 Static dataset	Integrate real-time weather or soil APIs
