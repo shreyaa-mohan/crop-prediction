@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Prediction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .card {
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+        }
+        .card-body {
+            padding: 30px;
+        }
+        .btn-primary {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+        .btn-primary:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+        .result {
+            margin-top: 30px;
+        }
+        .alert {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .icon {
+            font-size: 40px;
+            color: #28a745;
+            cursor: pointer;
+            transition: transform 0.3s;
+            margin: 0 15px;
+        }
+        .icon:hover {
+            transform: scale(1.1);
+        }
+        .icon-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-leaf"></i> Crop Prediction Service
+            </div>
+            <div class="card-body">
+                <form action="/predict" method="POST">
+                    <div class="mb-3">
+                        <label for="crop_name" class="form-label">Enter Crop Name</label>
+                        <input type="text" class="form-control" id="crop_name" name="crop_name" placeholder="E.g., wheat, rice, etc." required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone_number" class="form-label">Enter Phone Number</label>
+                        <input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="Enter your phone number" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Get Prediction</button>
+                </form>
+
+                {% if predicted_yield %}
+                <div class="result mt-4">
+                    <div class="alert alert-success" role="alert">
+                        <strong>Prediction Successful!</strong><br>
+                        <p>Predicted Yield: {{ predicted_yield }} quintals/ha</p>
+                        <p>Predicted Price: ₹{{ predicted_price }}</p>
+                    </div>
+
+                    <div class="alert alert-info" role="alert">
+                        {{ sms_message }}
+                    </div>
+                </div>
+                {% elif message %}
+                <div class="result mt-4">
+                    <div class="alert alert-danger" role="alert">
+                        {{ message }}
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Image Section -->
+        <div class="image-container">
+            <img src="https://via.placeholder.com/800x400/28a745/FFFFFF?text=Crop+Prediction" alt="Crop Prediction">
+        </div>
+
+        <!-- Icon Section -->
+        <div class="icon-container">
+            <i class="fas fa-seedling icon" title="Grow Your Crops"></i>
+            <i class="fas fa-tractor icon" title="Farm Equipment"></i>
+            <i class="fas fa-apple-alt icon" title="Harvest Crops"></i>
+            <i class="fas fa-leaf icon" title="Agriculture"></i>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
