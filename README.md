@@ -1,3 +1,5 @@
+# 🌾 Crop Prediction Web App with SMS Notifications
+
 This is a machine learning-based web application that predicts **crop yield** (in quintals/hectare) and **market price** (in INR) based on the selected crop. Built with **Flask**, it also sends real-time SMS notifications with the prediction results using the **Fast2SMS API**.
 
 ---
@@ -51,7 +53,7 @@ Edit
 ## 🚀 Getting Started
 
  1. Clone this repository
-git clone https://github.com//crop-prediction.git
+git clone https://github.com/shreyaa-mohan/crop-prediction.git
 cd crop-prediction
 
 2. (Optional) Create a virtual environment
