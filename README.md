@@ -65,7 +65,7 @@ cd crop-prediction
 
 ### 4. Add your Fast2SMS API key
 - In app.py, replace the authorization key:
--headers = {
+- headers = {
     'authorization': 'YOUR_FAST2SMS_API_KEY'
 }
 
@@ -75,18 +75,18 @@ cd crop-prediction
 - http://127.0.0.1:5000
 
 ## 📌 Use Cases
-📲 Farmer assistance in rural areas without internet
-📊 Agri-tech demos and hackathon prototypes
-🧪 ML model experimentation in agriculture
+- 📲 Farmer assistance in rural areas without internet
+- 📊 Agri-tech demos and hackathon prototypes
+- 🧪 ML model experimentation in agriculture
 
 ## 🔮 Future Improvements
--Current Limitation	Possible Enhancement
-Basic regression models	Use advanced models (e.g., XGBoost)
-SMS in English only	Add regional language support
-Static dataset	Integrate real-time weather or soil APIs
-No deployment	Deploy on Render, Railway, or Replit
+- Current Limitation	Possible Enhancement
+- Basic regression models	Use advanced models (e.g., XGBoost)
+- SMS in English only	Add regional language support
+- Static dataset	Integrate real-time weather or soil APIs
+- No deployment	Deploy on Render, Railway, or Replit
 
 ## 🙋‍♀️ Author
-Shreya Mohan:shreyamohan74@gmail.com
-Open to feedback and collaboration!
+- Shreya Mohan:shreyamohan74@gmail.com
+- Open to feedback and collaboration!
 
