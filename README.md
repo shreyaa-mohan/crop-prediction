@@ -51,8 +51,8 @@ and the predicted price is 1830.75 INR.
 ## 🚀 Getting Started
 
 ### 1. Clone this repository
-git clone https://github.com/shreyaa-mohan/crop-prediction.git
-cd crop-prediction
+- git clone https://github.com/shreyaa-mohan/crop-prediction.git
+- cd crop-prediction
 
 ### 2. (Optional) Create a virtual environment
 
